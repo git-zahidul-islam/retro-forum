@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,80 @@
     <!-- style added -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1 class="text-2xl">hi</h1>
+
+<body class="mulish-font">
+    <header class="lg:w-[1170px] w-11/12 mx-auto lg:mt-8 md:mt-7 mt-4">
+        <section class=nav-ber>
+            <div class="navbar bg-base-100 flex items-center">
+                <div class="flex-1">
+                    <a class="lg:text-4xl md:text-3xl text-2xl font-black text-[#12132D]">Reto</a>
+                </div>
+                <div class="flex-none">
+                    <div class="flex lg:gap-3 gap-2 items-center">
+                        <img title="Hello" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
+                            src="images/home.png" alt="home">
+                        <img title="Pen" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
+                            src="images/pen.png" alt="pen">
+                        <img title="Users" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
+                            src="images/user.png" alt="user">
+                        <img title="Flag" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
+                            src="images/flag.png" alt="flag">
+                        <button
+                            class="bg-[#797DFC] lg:px-10 px-4 lg:py-3 py-1 rounded-[50px] lg:text-xl text-lg lg:font-bold font-semibold text-white">Sign
+                            in</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner section -->
+        <section class="nav-banner px-2 lg:mt-8 md:mt-5 mt-4">
+            <div
+                class="bg-[url('/images/bgbanner.png')] bg-no-repeat bg-center bg-cover rounded-3xl bg-[#12132D] flex lg:flex-row flex-col lg:gap-0 gap-3 lg:justify-between md:justify-between items-center lg:px-24 md:px-14 px-3 lg:py-20 md:py-14 py-3">
+                <!-- banner title & des -->
+                <div class="lg:space-y-6 space-y-2 flex flex-col justify-center w-full">
+                    <h1
+                        class="lg:text-6xl md:text-5xl text-3xl lg:font-black md:font-extrabold font-semibold text-white">
+                        Welcome to the <br> ReTro Forum</h1>
+                    <p
+                        class="lg:text-xl md:text-xl text-base lg:font-medium font-normal text-[#FFFFFFCC] lg:w-[450px] w-[280px]">
+                        Share your
+                        favorite opinion and win and wp forum coffee mug!</p>
+                    <div>
+                        <input
+                            class="bg-white lg:px-5 md:px-5 px-3 lg:py-4 md:py-4 py-2 rounded-[50px] lg:w-96 md:w-72 w-52 border-0 outline-0"
+                            type="text" placeholder="Search here anything">
+                        <p
+                            class="bg-[#797DFC] lg:px-7 md:px-6 px-3 lg:py-2 md:py-2  py-1 inline-block rounded-[45px] relative lg:right-[120px] md:right-[110px] right-[85px] text-white">
+                            Search</p>
+                    </div>
+                </div>
+                <!-- banner score box -->
+                <div
+                    class="bg-white lg:p-10 md:p-8 p-3  rounded-3xl lg:h-[310px] h-[180px] lg:w-[370px] w-[180px] lg:space-y-6 space-y-1">
+                    <div class="flex justify-between">
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">Registered Users</p>
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">01</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">Forum</p>
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">01</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">Topic</p>
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">01</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">Replies</p>
+                        <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <main></main>
     <footer></footer>
     <!-- script -->
     <script src="script.js"></script>
 </body>
+
 </html>

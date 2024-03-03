@@ -22,10 +22,12 @@
                 <div class="flex-none">
                     <div class="flex lg:gap-3 gap-2 items-center">
                         <div class="tooltip" data-tip="Home">
-                            <img class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer" src="images/home.png" alt="home">
+                            <img class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer" src="images/home.png"
+                                alt="home">
                         </div>
                         <div class="tooltip" data-tip="Editor">
-                            <img title="Pen" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer" src="images/pen.png" alt="pen">
+                            <img title="Pen" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
+                                src="images/pen.png" alt="pen">
                         </div>
                         <div class="tooltip" data-tip="Users">
                             <img title="Users" class="lg:w-12 md:w-10 w-8 lg:h-12 md:h-10 h-8 cursor-pointer"
@@ -87,7 +89,102 @@
             </div>
         </section>
     </header>
-    <main></main>
+    <main class="lg:w-[1170px] w-11/12 mx-auto lg:mt-20 md:mt-16 mt-8">
+        <!-- discuss section -->
+        <section class="flex flex-col lg:space-y-6 md:space-y-4 space-y-2">
+            <!-- discuss body part -->
+            <div class="flex flex-col items-center lg:space-y-6 md:space-y-4 space-y-2">
+                <h1 class="lg:font-black font-medium lg:text-4xl md:text-3xl text-2xl text-[#12132D] text-center">Let’s
+                    Discuss</h1>
+                <p
+                    class="text-center lg:text-lg text-base font-normal text-[#12132D99] lg:w-[621px] md:w-[470px] w-[300px]">
+                    Yes, you can run unit tests and
+                    view the results
+                    directly within the app. The integrated testing features allow for a
+                    streamlined .</p>
+            </div>
+            <!-- two card mother div-->
+            <div>
+                <div class="flex lg:flex-row flex-col lg:gap-6 md:gap-4 gap-2 justify-between">
+                    <!-- all read able card -->
+                    <div class="flex-1 bg-[#F3F3F5] lg:p-5 md:p-4 p-1 lg:rounded-2xl rounded-xl">
+                        <div class="flex lg:gap-6 gap-3">
+                            <!-- image side -->
+                            <div>
+                                <div class="avatar online">
+                                    <div class="w-20 rounded-2xl">
+                                        <img
+                                            src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- text site -->
+                            <div class="lg:space-y-4 md:space-y-3 space-y-2">
+                                <div class="flex gap-5">
+                                    <p class="text-sm font-medium text-[#12132DCC] font-inter"><span># Music</span></p>
+                                    <p class="text-sm font-medium text-[#12132DCC] font-inter">Author : Awlad Hossain
+                                    </p>
+                                </div>
+                                <h1
+                                    class="lg:text-xl md:text-base text-sm lg:font-bold md:font-bold font-semibold text-[#12132D]">
+                                    10 Kids Unaware of Their Halloween Costume</h1>
+                                <p class="font-inter lg:text-base md:text-base text-sm font-normal text-[#12132D99]">
+                                    It’s one thing to subject yourself to ha Halloween costume mishap because, hey
+                                    that’s your prerogative</p>
+                                <div class="border-[1px] border-dashed border-[#12132D40]"></div>
+                                <div class="flex">
+                                    <div class="flex-1 flex gap-4">
+                                        <div class="flex gap-2 items-center">
+                                            <img class="w-[21px] h-[19.80px]" src="icons/chat.png" alt="chat">
+                                            <p>560</p>
+                                        </div>
+                                        <div class="flex gap-2 items-center">
+                                            <img class="w-[21px] h-[19.80px]" src="icons/tabler-icon-eye.png"
+                                                alt="eyes">
+                                            <p>1568</p>
+                                        </div>
+                                        <div class="flex gap-2 items-center">
+                                            <img class="w-[21px] h-[19.80px]" src="icons/clock.png" alt="clock">
+                                            <p>5min</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="icons/read-message.png" alt="read message">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- reading append here -->
+                    <div class="bg-[#12132D0D] lg:p-6 md:p-4 p-2 lg:rounded-2xl rounded-xl lg:w-[375px] w-[250px]">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="text-[#12132D] lg:text-xl text-sm font-bold">Title</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="icons/make-read-done.png" alt="">
+                                <p>Make As read</p>
+                                <p>( <span id="select-card-count">0</span> )</p>
+                            </div>
+                        </div>
+                        <!-- append here -->
+                        <div id="readed-times" class="pt-3">
+                            <div class="flex gap-4 items-center bg-white lg:p-4 p-2 rounded-md">
+                                <div class="flex-1">
+                                    <p class="text-base lg:font-semibold font-medium text-[#12132D]">10 Kids Unaware of
+                                        Their Halloween Costume</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <img src="icons/tabler-icon-eye.png" alt="eye">
+                                    <p>1568</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <!-- script -->
     <script src="script.js"></script>

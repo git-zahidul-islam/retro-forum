@@ -8,3 +8,6 @@
 .mulish-font{
     font-family: "Mulish", sans-serif;
 }
+.footer-bg {
+    background: linear-gradient(180.00deg, rgba(18, 19, 45, 0.05), rgba(18, 19, 45, 0) 100%);
+}

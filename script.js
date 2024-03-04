@@ -3,21 +3,18 @@ const readableCard = document.getElementById('readable-card');
 const latestPost = document.getElementById('latest-post');
 const cardCount = document.getElementById('select-card-count')
 
-
-
 // api get data all post
-const allPostLoad = async () => {
+const allPostLoad = async (search) => {
     // loading
     document.getElementById('loading').style.display = 'flex'
-    const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${search ? search : ''}`)
     const resData = await res.json()
     const data = resData.posts;
-
+    readableCard.innerHTML = '';
 
     data.forEach(data => {
         // loading
         document.getElementById('loading').style.display = 'none';
-        // console.log(data)
         const newDiv = document.createElement('div');
         newDiv.classList = `flex-1 flex flex-col lg:gap-4 gap-2`
         newDiv.innerHTML = `
@@ -93,13 +90,12 @@ function readHandler(title, count) {
 const searchButton = () => {
     const searchField = document.getElementById('search-field').value;
     if (searchField) {
-
+        allPostLoad(searchField)
     }
     else {
         alert(`write text`)
     }
 }
-
 
 // latest post 
 const latestPostLoad = async () => {
@@ -107,14 +103,13 @@ const latestPostLoad = async () => {
     const resData = await res.json()
     const data = resData
     data.forEach(data => {
-        // console.log(data)
         const newDiv = document.createElement('div');
         newDiv.innerHTML = `
             <div class="bg-white border-[1px] lg:p-6 md:p-4 p-2 rounded-2xl lg:space-y-3 md:space-y-3 space-y-1">
                     <img class="w-full h-44 rounded-2xl" src="${data.cover_image}" alt="image">
                     <div class="flex items-center gap-4">
-                        <img src="icons/clock.png" alt="">
-                        <p class="text-[#12132D99] lg:text-base text-sm font-normal">${data.author.posted_date ? data.author.posted_date : "No publish date"}</p>
+                        <img src="icons/cal.png" alt="">
+                        <p class="text-[#12132D99] lg:text-base text-sm font-bold">${data.author.posted_date ? data.author.posted_date : "No publish date"}</p>
                     </div>
                     <h2 class="lg:text-lg text-sm lg:font-extrabold font-semibold">${data.title}</h2>
                     <p class="text-base font-normal
@@ -131,7 +126,6 @@ const latestPostLoad = async () => {
         latestPost.appendChild(newDiv);
     })
 }
-
 
 latestPostLoad()
 allPostLoad()

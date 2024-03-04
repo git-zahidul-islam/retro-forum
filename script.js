@@ -2,7 +2,7 @@
 const readableCard = document.getElementById('readable-card');
 const latestPost = document.getElementById('latest-post');
 const cardCount = document.getElementById('select-card-count')
-let allPostDataContainer = []
+
 
 
 // api get data all post
@@ -12,7 +12,7 @@ const allPostLoad = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     const resData = await res.json()
     const data = resData.posts;
-    allPostDataContainer.push(resData.posts)
+
 
     data.forEach(data => {
         // loading

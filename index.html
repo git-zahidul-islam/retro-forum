@@ -60,17 +60,20 @@
                         Share your
                         favorite opinion and win and wp forum coffee mug!</p>
 
-                    <div class="flex lg:flex-row flex-col lg:justify-stretch justify-center">
+                    <div class="flex lg:flex-row flex-col lg:justify-stretch justify-center relative">
                         <input id="search-field"
                             class="bg-white lg:px-5 md:px-5 px-3 lg:py-4 md:py-4 py-3 rounded-[50px] lg:w-96 md:w-72 w-full border-0 outline-0 lg:text-base md:text-base text-xs text-black font-bold"
                             type="text" placeholder="Search here anything">
-                        <div class="flex lg:justify-stretch md:justify-stretch justify-end lg:pe-0 pe-1">
-                            <button onclick="searchButton()">
-                                <p
-                                    class="bg-[#797DFC] lg:px-7 md:px-6 px-3 lg:py-2 md:py-2  py-1 inline-block rounded-[45px] relative lg:right-[120px] md:-right-[182px] lg:top-0 md:-top-[47px] -top-9 text-white">
-                                    Search</p>
-                            </button>
-                        </div>
+
+                        <button class="absolute lg:left-[268px] md:left-[25%] left-[73%] lg:top-2 md:top-2 top-1"
+                            onclick="searchButton()">
+                            <p
+                                class="bg-[#797DFC] lg:px-7 md:px-6 px-3 lg:py-2 md:py-2  py-1 inline-block rounded-[45px] text-white">
+                                Search</p>
+                        </button>
+                        <!-- <div class="flex lg:justify-stretch md:justify-stretch justify-end lg:pe-0 pe-1">
+                            
+                        </div> -->
                     </div>
 
                 </div>
@@ -179,7 +182,7 @@
             </div>
             <!-- post here -->
             <div id="latest-post" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4 lg:mt-8 mt-2">
-               
+
             </div>
         </section>
     </main>
@@ -196,10 +199,10 @@
         </aside>
         <nav>
             <div class="grid grid-flow-col gap-4">
-                <img src="icons/logo-twitter 2.png" alt="twitter">
-                <img src="icons/2.png" alt="facebook">
-                <img src="icons/3.png" alt="instagram">
-                <img src="icons/4.png" alt="github">
+                <img class="cursor-pointer" src="icons/logo-twitter 2.png" alt="twitter">
+                <img class="cursor-pointer" src="icons/2.png" alt="facebook">
+                <img class="cursor-pointer" src="icons/3.png" alt="instagram">
+                <img class="cursor-pointer" src="icons/4.png" alt="github">
             </div>
         </nav>
         <div class="w-full px-10">

@@ -7,13 +7,16 @@ let allPostDataContainer = []
 
 // api get data all post
 const allPostLoad = async () => {
+    // loading
+    document.getElementById('loading').style.display = 'flex'
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     const resData = await res.json()
     const data = resData.posts;
     allPostDataContainer.push(resData.posts)
 
     data.forEach(data => {
-        // color check
+        // loading
+        document.getElementById('loading').style.display = 'none';
         // console.log(data)
         const newDiv = document.createElement('div');
         newDiv.classList = `flex-1 flex flex-col lg:gap-4 gap-2`
@@ -42,7 +45,7 @@ const allPostLoad = async () => {
                                 <p class="font-inter lg:text-base md:text-base text-sm font-normal text-[#12132D99]">${data.description}</p>
                                 <div class="border-[1px] border-dashed border-[#12132D40]"></div>
                                 <div class="flex justify-between">
-                                    <div class="flex-1 flex items-center gap-4">
+                                    <div class="flex-1 flex items-center lg:gap-4 gap-1">
                                         <div class="flex gap-2 items-center">
                                             <img class="w-[21px] h-[19.80px]" src="icons/chat.png" alt="chat">
                                             <p>${data.comment_count}</p>
@@ -70,7 +73,7 @@ const allPostLoad = async () => {
 // read handler 
 const readTimes = document.getElementById('read-times');
 
-function readHandler(title,count) {
+function readHandler(title, count) {
     const div = document.createElement('div');
     div.innerHTML = `
         <div class="flex gap-4 items-center bg-white lg:p-4 p-2 rounded-md mb-2">
@@ -86,7 +89,16 @@ function readHandler(title,count) {
     readTimes.appendChild(div);
     cardCount.innerText = parseInt(cardCount.innerText) + 1;
 }
+// search item section
+const searchButton = () => {
+    const searchField = document.getElementById('search-field').value;
+    if (searchField) {
 
+    }
+    else {
+        alert(`write text`)
+    }
+}
 
 
 // latest post 

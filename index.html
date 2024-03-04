@@ -49,28 +49,34 @@
             <div
                 class="bg-[url('/images/bgbanner.png')] bg-no-repeat bg-center bg-cover rounded-3xl bg-[#12132D] flex lg:flex-row flex-col lg:gap-0 gap-3 lg:justify-between md:justify-between items-center lg:px-24 md:px-14 px-3 lg:py-20 md:py-14 py-3">
                 <!-- banner title & des -->
-                <div class="lg:space-y-6 space-y-2 flex flex-col justify-center w-full">
+                <div class="lg:space-y-6 space-y-2 flex flex-col  w-full">
                     <h1
-                        class="lg:text-6xl md:text-5xl text-3xl lg:font-black md:font-extrabold font-semibold text-white">
+                        class="lg:text-6xl md:text-5xl text-3xl lg:font-black md:font-extrabold font-semibold text-white lg:text-start text-center">
                         Welcome to the <br> <span
                             class="bg-gradient-to-r from-[#797DFCFF] to-[#797DFC3D] inline-block text-transparent bg-clip-text">Tale</span>
                         Forum</h1>
                     <p
-                        class="lg:text-xl md:text-xl text-base lg:font-medium font-normal text-[#FFFFFFCC] lg:w-[450px] w-[280px]">
+                        class="lg:text-xl md:text-xl text-base lg:font-medium font-normal text-[#FFFFFFCC] lg:w-[450px] w-full lg:text-start text-center">
                         Share your
                         favorite opinion and win and wp forum coffee mug!</p>
-                    <div>
-                        <input
-                            class="bg-white lg:px-5 md:px-5 px-3 lg:py-4 md:py-4 py-2 rounded-[50px] lg:w-96 md:w-72 w-52 border-0 outline-0"
+
+                    <div class="flex lg:flex-row flex-col lg:justify-stretch justify-center">
+                        <input id="search-field"
+                            class="bg-white lg:px-5 md:px-5 px-3 lg:py-4 md:py-4 py-3 rounded-[50px] lg:w-96 md:w-72 w-full border-0 outline-0 lg:text-base md:text-base text-xs text-black font-bold"
                             type="text" placeholder="Search here anything">
-                        <p
-                            class="bg-[#797DFC] lg:px-7 md:px-6 px-3 lg:py-2 md:py-2  py-1 inline-block rounded-[45px] relative lg:right-[120px] md:right-[110px] right-[85px] text-white">
-                            Search</p>
+                        <div class="flex lg:justify-stretch md:justify-stretch justify-end lg:pe-0 pe-1">
+                            <button onclick="searchButton()">
+                                <p
+                                    class="bg-[#797DFC] lg:px-7 md:px-6 px-3 lg:py-2 md:py-2  py-1 inline-block rounded-[45px] relative lg:right-[120px] md:-right-[182px] lg:top-0 md:-top-[47px] -top-9 text-white">
+                                    Search</p>
+                            </button>
+                        </div>
                     </div>
+
                 </div>
                 <!-- banner score box -->
                 <div
-                    class="bg-white lg:p-10 md:p-8 p-3  rounded-3xl lg:h-[310px] h-[180px] lg:w-[450px] w-[190px] lg:space-y-6 space-y-1">
+                    class="bg-white lg:p-10 md:p-8 p-3  rounded-3xl lg:h-[310px] h-[180px] lg:w-[450px] w-full lg:space-y-6 space-y-1">
                     <div class="flex justify-between">
                         <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">Registered Users</p>
                         <p class="lg:text-2xl text-lg font-medium text-[#12132DCC]">01</p>
@@ -99,22 +105,29 @@
                 <h1 class="lg:font-black font-medium lg:text-4xl md:text-3xl text-2xl text-[#12132D] text-center">Let’s
                     Discuss</h1>
                 <p
-                    class="text-center lg:text-lg text-base font-normal text-[#12132D99] lg:w-[621px] md:w-[470px] w-[300px]">
+                    class="text-center lg:text-lg text-base font-normal text-[#12132D99] lg:w-[621px] md:w-[470px] w-full">
                     Yes, you can run unit tests and
                     view the results
                     directly within the app. The integrated testing features allow for a
                     streamlined .</p>
+            </div>
+            <!-- loading spinner -->
+            <div id="loading" class="hidden justify-center">
+                <span class="loading loading-bars loading-xs"></span>
+                <span class="loading loading-bars loading-sm"></span>
+                <span class="loading loading-bars loading-md"></span>
+                <span class="loading loading-bars loading-lg"></span>
             </div>
             <!-- two card mother div-->
             <div>
                 <div class="flex lg:flex-row flex-col lg:gap-6 md:gap-4 gap-2 justify-between">
                     <!-- all read able card -->
                     <div id="readable-card" class="flex-1 flex flex-col lg:gap-4 gap-2">
-                       
+
 
                     </div>
                     <!-- reading append here -->
-                    <div class="bg-[#12132D0D] lg:p-6 md:p-4 p-2 lg:rounded-2xl rounded-xl lg:w-[375px] w-[250px]">
+                    <div class="bg-[#12132D0D] lg:p-6 md:p-4 p-2 lg:rounded-2xl rounded-xl lg:w-[375px] w-full">
                         <div class="flex justify-between">
                             <div>
                                 <p class="text-[#12132D] lg:text-xl text-sm font-bold">Title</p>
